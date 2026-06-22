@@ -166,6 +166,12 @@ git merge feature-name
 git branch new-branch-name source-branch
 ```
 
+### Delete local branch
+
+```bash
+git branch -d local-branch
+```
+
 ---
 
 # 🌐 GitHub Remote
