@@ -176,13 +176,14 @@ git branch -d local-branch
 ---
 
 # 🌐 GitHub Remote
+merge hahahah
 
 ### Add remote
 
 ```bash
 git remote add origin <url>
 ```
-
+cody bt third
 ### Push to GitHub
 
 ```bash
