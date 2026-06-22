@@ -169,6 +169,7 @@ git branch new-branch-name source-branch
 ### Delete local branch
 
 ```bash
+git switch main
 git branch -d local-branch
 ```
 
