@@ -8,9 +8,9 @@
 
 Git has 3 areas:
 
-* **Working Directory** → your files
-* **Staging Area** → prepared changes
-* **Repository** → saved commits (history)
+- **Working Directory** → your files
+- **Staging Area** → prepared changes
+- **Repository** → saved commits (history)
 
 GitHub = remote copy of your repository.
 
@@ -159,6 +159,12 @@ git checkout main
 git merge feature-name
 ```
 
+### Create branch from correct sources
+
+```bash
+git branch new-branch-name source-branch
+```
+
 ---
 
 # 🌐 GitHub Remote
@@ -247,11 +253,11 @@ git reset --hard
 
 # 🧠 Git Mental Model
 
-* `add` → select changes
-* `commit` → save snapshot
-* `push` → upload to GitHub
-* `pull` → download updates
-* `branch` → parallel timeline
+- `add` → select changes
+- `commit` → save snapshot
+- `push` → upload to GitHub
+- `pull` → download updates
+- `branch` → parallel timeline
 
 ---
 
@@ -271,11 +277,11 @@ git push
 
 # ⚠️ Ignore for now
 
-* submodules
-* worktrees
-* cherry-pick
-* reflog
-* advanced log filters
+- submodules
+- worktrees
+- cherry-pick
+- reflog
+- advanced log filters
 
 ---
 
