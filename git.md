@@ -136,6 +136,18 @@ Edit the global configuration file in a text editor
 $ git config --global --edit
 ```
 
+shows the final values.
+
+```shell script
+$ git config --list
+```
+
+shows where those values came from.
+
+```shell script
+$ git config --show-origin --list
+```
+
 ### Working with Branches
 
 List all local branches
