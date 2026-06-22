@@ -63,6 +63,7 @@ git status
 git add .
 git commit -m "message"
 git push
+git pull
 ```
 
 ### Shortcut commit (tracked files only)
@@ -185,6 +186,18 @@ git push -u origin main
 
 ```bash
 git remote -v
+```
+
+### Push branch to Github
+
+```bash
+git push --set-upstream origin branch-name
+```
+
+or
+
+```bash
+git push -u origin branch-name
 ```
 
 ### Delete remote branch
