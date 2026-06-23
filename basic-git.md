@@ -268,6 +268,37 @@ git restore --staged file
 git reset
 git reset --hard
 ```
+## 🔥 Fix Merge Conflicts
+
+```bash
+git switch main
+git pull origin main
+git switch my-branch
+git merge main
+```
+
+### Flow
+
+```text
+main
+↓
+Pull latest changes from GitHub
+↓
+Switch back to my branch
+↓
+Merge main into my branch
+↓
+Conflict?
+├─ No → Continue working
+└─ Yes → Fix in VS Code → Save
+             ↓
+         git add .
+         git commit
+         git push
+             ↓
+      Create Pull Request
+      Merge into main
+```
 
 ---
 
