@@ -268,6 +268,7 @@ git restore --staged file
 git reset
 git reset --hard
 ```
+
 ## 🔥 Fix Merge Conflicts
 
 ```bash
@@ -279,7 +280,7 @@ git merge main
 
 ### Flow
 
-```text
+````text
 main
 ↓
 Pull latest changes from GitHub
@@ -298,7 +299,6 @@ Conflict?
              ↓
       Create Pull Request
       Merge into main
-```
 
 ---
 
@@ -322,7 +322,7 @@ git commit -m "feature done"
 git checkout main
 git merge feature
 git push
-```
+````
 
 ---
 
