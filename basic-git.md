@@ -169,36 +169,22 @@ git restore <file>
 ### Unstage everything
 
 ```bash
-git reset <commit-hash>
+git reset
 ```
 
 **Use:**
 
-- Move back to a commit and unstage all changes while keeping the files.
+- Remove all files from staging while keeping changes.
 
----
-
-### Soft reset
+### Hard reset (danger)
 
 ```bash
-git reset --soft <commit hash>
+git reset --hard
 ```
 
 **Use:**
 
-- Move back to a commit but keep all changes staged.
-
----
-
-### Hard reset (Danger ⚠️)
-
-```bash
-git reset --hard <commit-hash>
-```
-
-**Use:**
-
-- Move back to a commit and delete all uncommitted changes from staging and the working directory.
+- Completely discard all uncommitted changes and return to the last commit.
 
 ---
 
@@ -510,5 +496,3 @@ git push
 Learn workflow first.
 Commands come naturally later.
 
-
-git revertq
