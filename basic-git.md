@@ -509,3 +509,6 @@ git push
 
 Learn workflow first.
 Commands come naturally later.
+
+
+git revertq
