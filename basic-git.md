@@ -500,3 +500,5 @@ Commands come naturally later.
 test one
 
 test nummber 2
+
+test error
