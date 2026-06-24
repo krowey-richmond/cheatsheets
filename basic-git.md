@@ -186,6 +186,45 @@ git reset --hard
 
 - Completely discard all uncommitted changes and return to the last commit.
 
+### Revert a commit
+
+```bash
+git revert <commit-hash>
+# Conflict?
+# Fix files in VS Code
+git add .
+git revert --continue
+```
+
+**Use:**
+
+- Undo a commit by creating a new commit that reverses its changes.
+- Continue the revert after fixing conflicts and staging the resolved files.
+
+---
+
+### Skip a revert
+
+```bash
+git revert --skip
+```
+
+**Use:**
+
+- Skip the current commit being reverted and continue with the next one.
+
+---
+
+### Abort a revert
+
+```bash
+git revert --abort
+```
+
+**Use:**
+
+- Cancel the revert and return to the state before the revert started.
+
 ---
 
 # 🌿 Branching
@@ -495,4 +534,3 @@ git push
 
 Learn workflow first.
 Commands come naturally later.
-
