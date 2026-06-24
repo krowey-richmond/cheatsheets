@@ -224,6 +224,95 @@ git revert --abort
 **Use:**
 
 - Cancel the revert and return to the state before the revert started.
+### Git Stash
+
+```bash
+git stash
+```
+
+**Use:**
+
+* Temporarily save both staged and unstaged changes to switch tasks safely.
+
+---
+
+### List stashes
+
+```bash 
+git stash list
+```
+
+**Use:**
+
+* Show all saved stashes with their IDs.
+
+---
+
+### Apply a specific stash
+
+```bash
+git stash apply stash@{0}
+```
+
+**Use:**
+
+* Restore a specific stash using its ID without deleting it.
+
+---
+
+### Pop latest stash
+
+```bash
+git stash pop
+```
+
+**Use:**
+
+* Restore the latest stash and remove it from the stash list.
+
+---
+
+### Apply specific stash and remove it
+
+```bash
+git stash pop stash@{0}
+```
+
+**Use:**
+
+* Restore a specific stash and delete it after applying.
+
+---
+
+### Delete a specific stash
+
+```bash
+git stash drop stash@{0}
+```
+
+**Use:**
+
+* Remove a specific stash using its ID.
+
+---
+
+### Save stash with message
+
+```bash
+git stash push -m "message"
+```
+
+**Use:**
+
+* Save current work with a label for easier identification.
+
+---
+
+### ⚠️ Important (Conflicts on restore)
+
+**Use:**
+
+* Applying or popping a stash after changes in the same files may cause merge conflicts that must be resolved before continuing.
 
 ---
 
