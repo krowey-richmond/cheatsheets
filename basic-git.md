@@ -25,52 +25,90 @@ git config --global user.name "Your Name"
 git config --global user.email "you@email.com"
 ```
 
+**Use:**
+
+- Set the name that appears on your commits.
+- Set the email linked to your commits and GitHub account.
+
 ### Set default branch to main
 
 ```bash
 git config --global init.defaultBranch main
 ```
 
+**Use:**
+
+- Make all new repositories start with `main` instead of `master`.
+
 ### Check config
 
 ```bash
 git config --list
+```
+
+```bash
 git config --show-origin --list
 ```
+
+**Use:**
+
+- See your current Git settings.
+- See where each Git setting comes from for debugging.
 
 ---
 
 # 📁 Start a Project
 
-### Initialize repository
+### Initialize a repository
 
 ```bash
 git init
 ```
 
-### Clone repository
+**Use:**
+
+- Turn the current folder into a Git repository.
+
+### Clone a repository
 
 ```bash
 git clone <repo_url>
 ```
+
+**Use:**
+
+- Download an existing repository from GitHub.
 
 ---
 
 # ✏️ Basic Workflow (MOST IMPORTANT)
 
 ```bash
-git status
-git add .
-git commit -m "message"
-git push
-git pull
+git status                  # Check status
+git add .                   # Stage all changes
+git add <file>              # Stage one file
+git commit -m "message"     # Commit staged files
+git push                    # Push changes
+git pull                    # Pull changes
 ```
+
+**Use:**
+
+- See changed, staged, and untracked files.
+- Prepare all changed files for the next commit.
+- Save staged changes as a snapshot in history.
+- Upload your local commits to GitHub.
+- Download and merge the latest changes from GitHub.
 
 ### Shortcut commit (tracked files only)
 
 ```bash
 git commit -am "message"
 ```
+
+**Uses:**
+
+- Quickly commit changes to existing tracked files.
 
 ---
 
@@ -83,11 +121,19 @@ touch index.html
 touch styles.css app.js
 ```
 
+**Use:**
+
+- Create new empty files from the terminal.
+
 ### Windows alternative
 
 ```bash
 echo "" > file.txt
 ```
+
+**Use:**
+
+- Create an empty file in PowerShell or Command Prompt.
 
 ---
 
@@ -106,11 +152,29 @@ git add .
 git restore --staged <file>
 ```
 
+**Use:**
+
+- Remove a file from staging without losing changes.
+
 ### Discard changes
 
 ```bash
 git restore <file>
 ```
+
+**Use:**
+
+- Throw away changes and restore the last committed version.
+
+### Unstage everything
+
+```bash
+git reset
+```
+
+**Use:**
+
+- Remove all files from staging while keeping changes.
 
 ### Hard reset (danger)
 
@@ -118,15 +182,23 @@ git restore <file>
 git reset --hard
 ```
 
+**Use:**
+
+- Completely discard all uncommitted changes and return to the last commit.
+
 ---
 
 # 🌿 Branching
 
-### View branches
+### View local branches
 
 ```bash
 git branch
 ```
+
+**Use:**
+
+- See all local branches and your current branch.
 
 ### Create branch
 
@@ -134,17 +206,39 @@ git branch
 git branch feature-name
 ```
 
+**Use:**
+
+- Start a new line of development.
+
+### Create a branch from another branch
+
+```bash
+git branch new-branch source-branch
+```
+
+**Use:**
+
+- Create a branch starting from a specific branch.
+
 ### Create + switch
 
 ```bash
 git checkout -b feature-name
 ```
 
-Modern:
+**Use:**
+
+- Create a branch and immediately move to it.
+
+**Modern:**
 
 ```bash
 git switch -c feature-name
 ```
+
+**Use:**
+
+- Create a branch and switch to it using modern Git.
 
 ### Switch branch
 
@@ -153,6 +247,10 @@ git checkout main
 git switch main
 ```
 
+**Use:**
+
+- Move to another branch to continue work there.
+
 ### Merge branch
 
 ```bash
@@ -160,11 +258,9 @@ git checkout main
 git merge feature-name
 ```
 
-### Create branch from correct sources
+**Use:**
 
-```bash
-git branch new-branch-name source-branch
-```
+- Bring another branch's commits into the main branch.
 
 ### Delete local branch
 
@@ -173,15 +269,43 @@ git switch main
 git branch -d local-branch
 ```
 
+**Use:**
+
+- Remove a local branch that is no longer needed.
+
+### Force delete a local branch
+
+```bash
+git branch -D branch-name
+```
+
+**Use:**
+
+- Delete a local branch even if it has unmerged commits.
+
 ---
 
 # 🌐 GitHub Remote
 
-### Add remote
+### Add remote repo
 
 ```bash
 git remote add origin <url>
 ```
+
+**Use:**
+
+- Connect your local project to a GitHub repository.
+
+### Check remote
+
+```bash
+git remote -v
+```
+
+**Use:**
+
+- See the names and URLs of connected repositories.
 
 ### Push to GitHub
 
@@ -189,11 +313,9 @@ git remote add origin <url>
 git push -u origin main
 ```
 
-### Check remote
+**Use:**
 
-```bash
-git remote -v
-```
+- Push the main branch for the first time and remember its remote.
 
 ### Push branch to Github
 
@@ -207,11 +329,19 @@ or
 git push -u origin branch-name
 ```
 
+**Use:**
+
+- Upload a new branch to GitHub and track it.
+
 ### Delete remote branch
 
 ```bash
 git push origin --delete master
 ```
+
+**Use:**
+
+- Remove a branch from GitHub.
 
 ---
 
@@ -223,27 +353,43 @@ git push origin --delete master
 git pull
 ```
 
+**Use:**
+
+- Download and merge the latest remote changes.
+
 ### Fetch only
 
 ```bash
 git fetch
 ```
 
+**Use:**
+
+- Download remote changes without merging them.
+
 ---
 
 # 📜 History & Debug
 
-### View commits
+### View commit history
 
 ```bash
 git log
 ```
 
-### Compact graph view
+**Use:**
+
+- See a visual summary of commits and branches.
+
+### Compact graph-view or history
 
 ```bash
 git log --oneline --graph --decorate --all
 ```
+
+**Use:**
+
+- See a visual summary of commits and branches.
 
 ### Show changes
 
@@ -252,24 +398,26 @@ git diff
 git diff --staged
 ```
 
+**Use:**
+
+- See changes that have not been staged.
+- See what will be included in the next commit.
+
 ### Show commit details
 
 ```bash
 git show <commit_id>
 ```
 
+**Use:**
+
+- Inspect a specific commit and its changes.
+
 ---
 
-# 🧹 Fixing Mistakes
+# 🔥 Fix Merge Conflicts
 
-```bash
-git restore file
-git restore --staged file
-git reset
-git reset --hard
-```
-
-## 🔥 Fix Merge Conflicts
+### Update main and merge it into your branch
 
 ```bash
 git switch main
@@ -278,27 +426,33 @@ git switch my-branch
 git merge main
 ```
 
-### Flow
+**Use:**
 
-````text
-main
-↓
-Pull latest changes from GitHub
-↓
-Switch back to my branch
-↓
-Merge main into my branch
-↓
-Conflict?
-├─ No → Continue working
-└─ Yes → Fix in VS Code → Save
-             ↓
-         git add .
-         git commit
-         git push
-             ↓
-      Create Pull Request
-      Merge into main
+- Switch to `main` and update it with the latest changes from GitHub.
+- Switch back to your `branch` and merge the updated `main` into it.
+
+### Finish a resolved conflict
+
+```bash
+git add .
+git commit
+git push
+```
+
+**Use:**
+
+- Save and upload the conflict resolution after fixing the files.
+- Create a Pull Request and merge your branch into `main`
+
+### Abort a merge
+
+```bash
+git merge --abort
+```
+
+**Use:**
+
+- Cancel the merge and return to the state before it started.
 
 ---
 
@@ -309,6 +463,7 @@ Conflict?
 - `push` → upload to GitHub
 - `pull` → download updates
 - `branch` → parallel timeline
+- `merge` → Combine timelines
 
 ---
 
@@ -322,7 +477,7 @@ git commit -m "feature done"
 git checkout main
 git merge feature
 git push
-````
+```
 
 ---
 
